@@ -142,7 +142,7 @@ Pool.prototype._create = function() {
     this._currentNumberOfConnectionsEstablishing++;
 
     // Connect to the database.
-    connection.on('connect', function() {
+    connection.on('ready', function() {
       // Decrement the current number of connections being established.
       pool._currentNumberOfConnectionsEstablishing--;
 
